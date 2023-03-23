@@ -112,7 +112,7 @@ const currentdate = new Date();
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "http://localhost:3002/auth/google/exambird",
+    callbackURL: "https://exambuilder.netlify.app/auth/google/exambird",
     // userProfileURL: "https://www.googleapis.com/oauth2/v1/certs"
   },
   function(accessToken, refreshToken, profile, cb) {
@@ -140,12 +140,7 @@ app.get("/auth/google/exambird",
   passport.authenticate('google', { failureRedirect: "/login" }),
   function(req, res) {
     // console.log(currUser.id);
-    res.redirect(url.format({
-      pathname:"http://localhost:3001",
-      // query: {
-      //   loggedIn:true
-      // }
-    }));
+    res.redirect("https://exambuilder.netlify.app/");
   });
 
 
