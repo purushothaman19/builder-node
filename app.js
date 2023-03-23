@@ -423,7 +423,7 @@ app.post('/postSummary', function(req, res){
 
         console.log(currUser);
         const data = JSON.stringify(final);
-        const testNum = `summary.${testName}.${time.replaceAll(' ','-')}`;
+        const testNum = `summary.${testName}.${time.replace(' ','-')}`;
         console.log(testNum);
       
         const filter = { name: currUser.displayName };
