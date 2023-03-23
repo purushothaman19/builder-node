@@ -112,7 +112,7 @@ const currentdate = new Date();
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "https://exambuilder.netlify.app/auth/google/exambird",
+    callbackURL: "https://exbuilder.onrender.com/auth/google/exambird",
     // userProfileURL: "https://www.googleapis.com/oauth2/v1/certs"
   },
   function(accessToken, refreshToken, profile, cb) {
